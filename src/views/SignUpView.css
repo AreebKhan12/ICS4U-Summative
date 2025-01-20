@@ -1,3 +1,162 @@
+.sign-up-page {
+  min-height: 100vh;
+  background-image: url(/src/imgs/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sign-up {
+  width: 90%;
+  margin-top: 10px;
+  max-width: 430px;
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sign-up h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sign-up form {
+  margin: 25px 0 40px;
+}
+
+form .info {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.info input {
+  width: 100%;
+  max-width: 390px;
+  height: 50px;
+  background: #333;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0px 20px;
+  transition: all 0.2s ease, transform 0.2s ease;
+}
+
+.info input:focus {
+  background: #444;
+  outline: none;
+  transform: scale(1.02);
+}
+
+.info input:is(:focus, :valid) {
+  padding: 16px 20px 0;
+}
+
+.info label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  color: #8c8c8c;
+  pointer-events: none;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+.info input:is(:focus, :valid)~label {
+  transform: translateY(-130%);
+  font-size: 0.75rem;
+}
+
+form .sign-up-btn {
+  width: 100%;
+  padding: 16px 0;
+  font-size: 1rem;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 4px;
+  margin: 20px 0 10px;
+  background: #eab308; 
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+form .sign-up-btn:hover {
+  background: rgb(0, 16, 122);
+  transform: scale(1.05);
+}
+
+form .help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form .remember {
+  display: flex;
+  align-items: center;
+}
+
+form .remember input {
+  margin-right: 5px;
+  accent-color: #b3b3b3;
+}
+
+form .help :where(label, a) {
+  font-size: 0.9rem;
+}
+
+.sign-up :where(label, p, a) {
+  color: #b3b3b3;
+}
+
+.sign-up p a {
+  color: #fff;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.sign-up p a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 740px) {
+  .sign-up {
+    top: 45%;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .info input {
+    width: 100%;
+  }
+
+  .sign-up h2 {
+    font-size: 1.75rem;
+  }
+
+  .sign-up-btn {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+
+  .info {
+    margin-bottom: 20px;
+  }
+
+  .Genreselector {
+margin-top: 10px;
+  }
+}
+
 .logo-nav {
   position: absolute;
   top: 0;
@@ -93,13 +252,13 @@ form .info {
   font-weight: 500;
   border-radius: 4px;
   margin: 5px 0;
-  background: rgb(0, 25, 181);
+  background: #eab308; 
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .sign-up-btn:hover {
-  background: rgb(0, 16, 122);
+  background: #eab308; 
   transform: scale(1.03);
 }
 
@@ -162,14 +321,14 @@ form .info {
 }
 
 .genre-select-button.selected {
-  background: linear-gradient(145deg, rgb(0, 25, 181), rgb(0, 16, 122));
+  background: linear-gradient(145deg, #eab308 );
   color: #fff;
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5), -3px -3px 7px rgba(0, 16, 122, 0.5);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5), -3px -3px 7px #eab308;
   transform: scale(1.08);
 }
 
 .genre-select-button.selected:hover {
-  background: linear-gradient(145deg, rgb(0, 30, 200), rgb(0, 20, 140));
+  background: linear-gradient(145deg, #eab308 );
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6), -4px -4px 10px rgba(0, 20, 140, 0.6);
 }
 

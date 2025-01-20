@@ -1,6 +1,87 @@
 .detail-view-container {
   padding: 60px;
   font-family: 'Roboto', sans-serif;
+  background-color: #1e293b; 
+  color: #e2e8f0; 
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.detail-view-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #facc15; 
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.detail-view-poster {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detail-info {
+  font-size: 1.1rem;
+  line-height: 1.6; 
+  margin-bottom: 10px;
+  color: #e2e8f0; 
+}
+
+.detail-info span {
+  font-weight: bold;
+  color: #facc15;
+}
+
+.trailer-section {
+  margin-top: 40px;
+  text-align: center;
+  color: #e2e8f0; 
+}
+
+.trailer-text {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #facc15; 
+}
+
+.trailer-section iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 8px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-cart-button {
+  background-color: #facc15; 
+  border: none;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 5px; 
+  color: #1e293b; 
+  font-size: 0.9rem; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; 
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.add-to-cart-button:hover {
+  background-color: #eab308;
+}
+.detail-view-container {
+  padding: 60px;
+  font-family: 'Roboto', sans-serif;
   background-color: #151515;
   color: #333;
   max-width: 1200px;

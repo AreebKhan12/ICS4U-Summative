@@ -1,47 +1,11 @@
-.settings-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #0e0d0d;
-  color: #fff;
-  min-height: 100vh;
-}
-
-.settings-logo-nav img {
-  max-width: 150px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.settings-form-wrapper {
-  width: 100%;
-  max-width: 550px;
-  background-color: #2a2a2a;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.settings-title {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-}
-
-.settings-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.settings-input-container {
+.email-container {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.settings-input {
-  width: 95%;
+.email-container input {
+  width: 92%;
+  max-width: 390px;
   height: 45px;
   background: #333;
   border: none;
@@ -49,21 +13,23 @@
   color: #fff;
   font-size: 0.95rem;
   padding: 14px 15px 0;
-  transition: all 0.2s ease;
+  /* Adjusted padding */
+  transition: all 0.2s ease, transform 0.2s ease;
 }
 
-.settings-input:focus {
+.email-container input:focus {
   background: #444;
   outline: none;
+  transform: scale(1.02);
 }
 
-.settings-input[readonly] {
+.email-container input[readonly] {
   background: #222;
   color: #8c8c8c;
   cursor: not-allowed;
 }
 
-.settings-label {
+.email-container label {
   position: absolute;
   left: 15px;
   top: 50%;
@@ -74,107 +40,187 @@
   transition: transform 0.2s ease, font-size 0.2s ease;
 }
 
-.settings-input:is(:focus, :valid)~.settings-label,
-.settings-input[readonly]~.settings-label {
+.email-container input:is(:focus, :valid)~label,
+.email-container input[readonly]~label {
   transform: translateY(-130%);
   font-size: 0.75rem;
+}.settings-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+background-color: #0e0d0d;
+color: #fff;
+min-height: 100vh;
+}
+
+.settings-logo-nav img {
+max-width: 150px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+
+.settings-form-wrapper {
+width: 100%;
+max-width: 550px;
+background-color: #2a2a2a;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.settings-title {
+text-align: center;
+font-size: 1.8rem;
+margin-bottom: 20px;
+}
+
+.settings-form {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.settings-input-container {
+position: relative;
+margin-bottom: 10px;
+}
+
+.settings-input {
+width: 95%;
+height: 45px;
+background: #333;
+border: none;
+border-radius: 4px;
+color: #fff;
+font-size: 0.95rem;
+padding: 14px 15px 0;
+transition: all 0.2s ease;
+}
+
+.settings-input:focus {
+background: #444;
+outline: none;
+}
+
+.settings-input[readonly] {
+background: #222;
+color: #8c8c8c;
+cursor: not-allowed;
+}
+
+.settings-label {
+position: absolute;
+left: 15px;
+top: 50%;
+color: #8c8c8c;
+pointer-events: none;
+transform: translateY(-50%);
+font-size: 0.9rem;
+transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+.settings-input:is(:focus, :valid)~.settings-label,
+.settings-input[readonly]~.settings-label {
+transform: translateY(-130%);
+font-size: 0.75rem;
 }
 
 .settings-genres-container {
-  margin-top: 20px;
+margin-top: 20px;
 }
 
 .settings-genres-title {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+font-size: 1.2rem;
+margin-bottom: 10px;
 }
 
 .settings-genres-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+gap: 10px;
 }
 
 .settings-genre-button {
-  padding: 10px 15px;
-  background: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+padding: 10px 15px;
+background: #333;
+color: #fff;
+border: none;
+border-radius: 4px;
+text-align: center;
+cursor: pointer;
+transition: background-color 0.3s ease;
 }
 
 .settings-genre-button.selected {
-  background: #007bff;
+background: #eab308; 
 }
 
 .settings-genre-button:hover {
-  background: #555;
+background: #555;
 }
 
 .settings-save-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: #fff;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.1s ease;
+margin-top: 20px;
+padding: 10px 20px;
+background: #eab308; 
+color: #fff;
+font-size: 1rem;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.1s ease;
 }
 
 .settings-save-btn:hover {
-  background: #0056b3;
+background: #0056b3;
 }
 
 .settings-purchases-container {
-  margin-top: 40px;
-  width: 100%;
-  max-width: 800px;
+margin-top: 40px;
+width: 100%;
+max-width: 800px;
 }
 
 .settings-purchases-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  text-align: center;
+font-size: 1.5rem;
+margin-bottom: 20px;
+text-align: center;
 }
 
 .settings-purchases-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 20px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 20px;
 }
 
 .settings-purchase-item {
-  background: #333;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+background: #333;
+padding: 10px;
+border-radius: 8px;
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .settings-purchase-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+transform: translateY(-5px);
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .settings-purchase-img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 4px;
-  cursor: pointer;
+width: 100%;
+max-height: 200px;
+object-fit: cover;
+border-radius: 4px;
+cursor: pointer;
 }
 
 .settings-purchase-title {
-  font-size: 1rem;
-  margin: 10px 0;
+font-size: 1rem;
+margin: 10px 0;
 }
 
 .settings-purchase-description {
-  font-size: 0.9rem;
-  color: #aaa;
+font-size: 0.9rem;
+color: #aaa;
 }

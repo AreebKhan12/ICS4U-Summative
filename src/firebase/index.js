@@ -4,13 +4,15 @@ import { getFirestore } from "firebase/firestore";
 
 // Paste your firebaseConfig from Firebase Console here
 const firebaseConfig = {
-    apiKey: "AIzaSyDA2lcGl9uV1pJ3WHTrTvw-J_H5tldlHoo",
-    authDomain: "summative-32a79.firebaseapp.com",
-    projectId: "summative-32a79",
-    storageBucket: "summative-32a79.firebasestorage.app",
-    messagingSenderId: "770652347729",
-    appId: "1:770652347729:web:5644a4a23d87f1f9c6c770"
-};
+    apiKey: "AIzaSyD4DW-qAn53NjWeGtQmqRkyIqgHdhOeGsI",
+    authDomain: "summative-e787e.firebaseapp.com",
+    projectId: "summative-e787e",
+    storageBucket: "summative-e787e.firebasestorage.app",
+    messagingSenderId: "9944568923",
+    appId: "1:9944568923:web:3c9ee19f54bea8622adb7e"
+  };
+  
+
 
 const config = initializeApp(firebaseConfig)
 const auth = getAuth(config);

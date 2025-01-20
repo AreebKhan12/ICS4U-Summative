@@ -68,7 +68,7 @@ function SignInView() {
             <button className="sign-in-btn" type="submit">Sign In</button>
           </form>
           <button className="sign-in-btn" onClick={() => loginByGoogle()}>Sign In With Google</button>
-          <p>New to Flixit? <Link to="/signup">Sign up now</Link></p>
+          <p>New to CineStream? <Link to="/signup">Sign up now</Link></p>
         </div>
       </div>
     </div>
